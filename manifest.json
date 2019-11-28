@@ -26,6 +26,11 @@
         "sizes": "512x512",
         "type": "image/png"
       }],
+    "intent_filters": {
+      "scope_url_scheme": "https",
+      "scope_url_host": "caltrain.chander.app",
+      "scope_url_path": "/"
+    },
     "lang": "en-US",
     "start_url": "/index.html",
     "display": "standalone",
