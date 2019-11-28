@@ -1,7 +1,46 @@
 window.onload = () => {
   'use strict'
-  
+
+  document.getElementById('legend').style.display = 'none'
+  document.getElementById('southbound').style.display = 'none'
+
+  const legendNav = document.getElementById('legend-nav')
+  const northboundNav = document.getElementById('northbound-nav')
+  const southboundNav = document.getElementById('southbound-nav')
+  const legend = document.getElementById('legend')
+  const northbound = document.getElementById('northbound')
+  const southbound = document.getElementById('southbound')
+
+  legendNav.addEventListener('click', function() {
+    legendNav.classList.add('active')
+    northboundNav.classList.remove('active')
+    southboundNav.classList.remove('active')
+
+    legend.style.display = ''
+    northbound.style.display = 'none'
+    southbound.style.display = 'none'
+  })
+  northboundNav.addEventListener('click', function() {
+    legendNav.classList.remove('active')
+    northboundNav.classList.add('active')
+    southboundNav.classList.remove('active')
+
+    legend.style.display = 'none'
+    northbound.style.display = ''
+    southbound.style.display = 'none'
+  })
+  southboundNav.addEventListener('click', function() {
+    legendNav.classList.remove('active')
+    northboundNav.classList.remove('active')
+    southboundNav.classList.add('active')
+
+    legend.style.display = 'none'
+    northbound.style.display = 'none'
+    southbound.style.display = ''
+  })
+
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./serviceworker.js')
+    navigator.serviceWorker
+      .register('./serviceworker.js')
   }
 }
