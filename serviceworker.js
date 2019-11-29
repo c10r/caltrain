@@ -2,7 +2,7 @@ const cacheName = 'hello-pwa'
 const filesToCache = [
   '/',
   '/index.html',
-  '/css/bootstrap.min.css',
+  '/css/navbar.css',
   '/js/main.js'
 ]
 
