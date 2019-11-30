@@ -62,9 +62,42 @@
 
     <div id="legend">
       <h5 class="card-title">Legend</h5>
-      <p class="card-text">- Train bypasses station.</p>
-      <p class="card-text">+ Train may leave up to 5 minutes early.</p>
-      <p class="card-text">* Train departure may be delayed up to 15 minutes after Sharks games.</p>
+      <table class="table table-sm text-nowrap">
+        <thead>
+          <th>Symbol</th>
+          <th>Meaning</th>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <td>-</td>
+            <td>Train bypasses the station</td>
+          </tr>
+          <tr class="table-light">
+            <td>+</td>
+            <td>Train may leave up to 5 minutes early</td>
+          </tr>
+          <tr class="table-light">
+            <td>*</td>
+            <td>May be delayed up to 15 minutes after Sharks games</td>
+          </tr>
+          <tr class="table-danger">
+            <td></td>
+            <td>Bullet train</td>
+          </tr>
+          <tr class="table-warning">
+            <td></td>
+            <td>Limited train</td>
+          </tr>
+          <tr class="table-secondary">
+            <td></td>
+            <td>Saturday only train</td>
+          </tr>
+          <tr class="table-success">
+            <td></td>
+            <td>Use shuttle bus instead of train</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div id="southbound" class="table-responsive">
