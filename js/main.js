@@ -3,6 +3,7 @@ window.onload = () => {
 
   document.getElementById('legend').style.display = 'none'
   document.getElementById('southbound').style.display = 'none'
+  document.getElementById('weekend').style.display = 'none'
 
   const legendNav = document.getElementById('legend-nav')
   const northboundNav = document.getElementById('northbound-nav')
@@ -23,7 +24,7 @@ window.onload = () => {
     legend.style.display = ''
     northbound.style.display = 'none'
     southbound.style.display = 'none'
-    weekendNav.style.display = 'none'
+    weekend.style.display = 'none'
   })
   northboundNav.addEventListener('click', function() {
     legendNav.classList.remove('active')
