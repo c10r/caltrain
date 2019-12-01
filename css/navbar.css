@@ -1,8 +1,13 @@
+div.table-responsive {
+  overflow: auto;
+  height: 90vh;
+}
+
 li.nav-item {
   text-align: center;
 }
 
-body, .navbar {
+body, .empty-space, .navbar {
   background-color: #ee2d19;
 }
 .navbar .navbar-brand {
