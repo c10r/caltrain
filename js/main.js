@@ -1,22 +1,22 @@
 window.onload = () => {
   'use strict'
 
-  document.getElementById('legend').style.display = 'none'
-  document.getElementById('southbound').style.display = 'none'
-  document.getElementById('northbound-weekend').style.display = 'none'
-  document.getElementById('southbound-weekend').style.display = 'none'
+  const legend = document.getElementById('legend')
+  const northbound = document.getElementById('northbound')
+  const southbound = document.getElementById('southbound')
+  const northboundWeekend = document.getElementById('northbound-weekend')
+  const southboundWeekend = document.getElementById('southbound-weekend')
+
+  legend.style.display = 'none'
+  southbound.style.display = 'none'
+  northboundWeekend.style.display = 'none'
+  southboundWeekend.style.display = 'none'
 
   const legendNav = document.getElementById('legend-nav')
   const northboundNav = document.getElementById('northbound-nav')
   const southboundNav = document.getElementById('southbound-nav')
   const northboundWeekendNav = document.getElementById('northbound-weekend-nav')
   const southboundWeekendNav = document.getElementById('southbound-weekend-nav')
-
-  const legend = document.getElementById('legend')
-  const northbound = document.getElementById('northbound')
-  const southbound = document.getElementById('southbound')
-  const northboundWeekend = document.getElementById('northbound-weekend')
-  const southboundWeekend = document.getElementById('southbound-weekend')
 
   legendNav.addEventListener('click', function() {
     legendNav.classList.add('active')
