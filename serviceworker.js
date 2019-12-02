@@ -2,6 +2,9 @@ const CACHE_NAME = 'caltrain-cache'
 const filesToCache = [
   '/',
   '/index.html',
+  '/south.html',
+  '/northweekend.html',
+  '/southweekend.html',
   '/css/navbar.css',
   '/js/main.js'
 ]
