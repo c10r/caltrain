@@ -2,8 +2,9 @@ const CACHE_NAME = 'caltrain-cache'
 const filesToCache = [
   '/',
   '/index.html',
-  '/south.html',
   '/northweekend.html',
+  '/offline.html',
+  '/south.html',
   '/southweekend.html',
   '/css/navbar.css',
   '/js/main.js'
@@ -24,10 +25,28 @@ self.addEventListener('fetch', e => {
     caches
       .open(CACHE_NAME)
       .then(cache => {
+        // First fetch via network request
         return fetch(e.request)
           .then(response => {
+            // Update cache accordingly
             cache.put(e.request, response.clone())
+            // Return the fetched response
             return response
+          })
+          .catch(() => {
+            // Means we could not fetch network request
+            // So let's get it from the cache first
+            return caches.match(e.request)
+              .then(res => {
+                // If res is undefined, we couldn't find anything in the cache
+                // Likely because the cache was not first populated with something
+                // Let's tell the user to first launch the app w/ a network connection
+                if (res === undefined) {
+                  return caches.match('offline.html')
+                }
+                // Return cached response
+                return res
+              })
           })
       })
   )
